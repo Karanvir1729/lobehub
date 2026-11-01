@@ -1,3 +1,5 @@
+import './AcceptanceEmbed.css';
+
 import { cx, Flexbox } from '@lobehub/ui';
 import { cssVar } from '@lobehub/ui/stylex/cssVar.stylex';
 import * as stylex from '@stylexjs/stylex';
@@ -22,8 +24,6 @@ import AcceptanceTabs, {
 import ReadChecks from '@/features/Acceptance/Viewer/ReadOnly/Checks';
 import ReadDiscussion from '@/features/Acceptance/Viewer/ReadOnly/Discussion';
 import { useAcceptanceBundle } from '@/features/Acceptance/Viewer/useAcceptanceBundle';
-
-import titleStyles from './AcceptanceEmbed.module.css';
 
 const styles = stylex.create({
   content: {
@@ -56,7 +56,13 @@ const EmbedContent = () => {
   );
 
   return (
-    <Flexbox className={cx(stylex.props(styles.content).className, titleStyles.content)} gap={24}>
+    <Flexbox
+      gap={24}
+      className={cx(
+        stylex.props(styles.content).className,
+        'lobe-acceptance-embed-fe01f599-content',
+      )}
+    >
       <AcceptanceIdentity />
       <AcceptanceGoal />
       <AcceptanceTabs
