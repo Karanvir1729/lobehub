@@ -156,7 +156,9 @@ export const AskUserQuestionResult = memo<AskUserQuestionResultProps>(
               key={`${question.question}-${index}`}
             >
               {multiple && <span {...stylex.props(styles.ordinal)}>{`Q${index + 1}`}</span>}
-              <div {...stylex.props(styles.questionContent, multiple && styles.titleRow)}>
+              <div
+                className={`${stylex.props(styles.questionContent).className} ${multiple ? stylex.props(styles.titleRow).className : ''}`.trim()}
+              >
                 <span {...stylex.props(styles.question)}>{question.question}</span>
                 {multiple && question.header && (
                   <span {...stylex.props(styles.header)}>{question.header}</span>

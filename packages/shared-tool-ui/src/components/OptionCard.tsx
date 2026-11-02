@@ -1,6 +1,6 @@
 'use client';
 
-import { Flexbox, Icon, Text } from '@lobehub/ui';
+import { cx, Flexbox, Icon, Text } from '@lobehub/ui';
 import { cssVar } from '@lobehub/ui/stylex/cssVar.stylex';
 import * as stylex from '@stylexjs/stylex';
 import { Check } from 'lucide-react';
@@ -37,7 +37,7 @@ const styles = stylex.create({
   optionLabel: { fontWeight: 500 },
   optionSelected: {
     backgroundColor: { 'default': cssVar.colorFillTertiary, ':hover': cssVar.colorFillTertiary },
-    backgroundImage: { 'default': 'none', ':hover': 'none' },
+    backgroundImage: 'none',
   },
   recommendedBadge: {
     flexShrink: 0,
@@ -83,13 +83,13 @@ export const OptionCard = memo<OptionCardProps>(
       aria-selected={selected}
       gap={12}
       role="option"
-      className={
+      className={cx(
         stylex.props(
           styles.option,
           selected && styles.optionSelected,
           highlighted && styles.optionHighlighted,
-        ).className
-      }
+        ).className,
+      )}
       onClick={() => {
         if (!disabled) onToggle();
       }}
