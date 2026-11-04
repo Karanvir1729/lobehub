@@ -110,7 +110,13 @@ export const workspaceInvitations = pgTable(
     role: text('role').notNull().default('member'),
     token: text('token').unique().notNull(),
     status: text('status').notNull().default('pending'),
-    expiresAt: timestamptz('expires_at').notNull(),
+    /**
+     * A reusable (shareable link) invitation admits any number of users and
+     * stays `pending` after each accept; a regular invitation is single-use.
+     */
+    reusable: boolean('reusable').notNull().default(false),
+    /** `null` means the invitation never expires (reusable links only). */
+    expiresAt: timestamptz('expires_at'),
     createdAt: createdAt(),
     updatedAt: updatedAt(),
   },
@@ -119,6 +125,10 @@ export const workspaceInvitations = pgTable(
     index('workspace_invitations_inviter_id_idx').on(t.inviterId),
     index('workspace_invitations_email_idx').on(t.email),
     index('workspace_invitations_token_idx').on(t.token),
+    // At most one live reusable link per workspace; rotating revokes the old one first.
+    uniqueIndex('workspace_invitations_active_link_uidx')
+      .on(t.workspaceId)
+      .where(sql`${t.reusable} = true AND ${t.status} = 'pending'`),
   ],
 );
 
