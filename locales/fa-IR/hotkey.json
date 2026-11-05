@@ -27,6 +27,8 @@
   "openChatSettings.title": "باز کردن تنظیمات گفت‌وگو",
   "openHotkeyHelper.desc": "مشاهده راهنمای تمام میانبرهای صفحه‌کلید",
   "openHotkeyHelper.title": "راهنمای میانبرها",
+  "openTaskFilter.desc": "منوی فیلتر را در صفحه وظایف باز کنید",
+  "openTaskFilter.title": "فیلتر وظایف",
   "prevTab.desc": "به تب قبلی در برنامه دسکتاپ بروید؛ در ابتدا به آخرین تب بازمی‌گردد",
   "prevTab.title": "تب قبلی",
   "regenerateMessage.desc": "تولید مجدد آخرین پیام",

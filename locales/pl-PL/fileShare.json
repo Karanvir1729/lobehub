@@ -1,0 +1,15 @@
+{
+  "popover.copyLink": "Kopiuj link",
+  "popover.copyLinkSuccess": "Link skopiowany",
+  "popover.linkHint": "Każdy, kto ma link, może wyświetlić i pobrać ten plik",
+  "popover.permissionLink": "Każdy z linkiem",
+  "popover.permissionPrivate": "Prywatne",
+  "popover.privateHint": "Tylko Ty możesz otworzyć ten plik",
+  "popover.sectionViews_one": "{{count}} wyświetlenie",
+  "popover.sectionViews_other": "{{count}} wyświetlenia",
+  "popover.title": "Udostępnij plik",
+  "popover.updateError": "Nie udało się zaktualizować ustawień udostępniania",
+  "popover.visibility": "Widoczność",
+  "popover.visibilityUpdated": "Widoczność zaktualizowana",
+  "shareButton.label": "Udostępnij"
+}

@@ -1,0 +1,15 @@
+{
+  "popover.copyLink": "نسخ الرابط",
+  "popover.copyLinkSuccess": "تم نسخ الرابط",
+  "popover.linkHint": "يمكن لأي شخص لديه الرابط عرض هذا الملف وتنزيله",
+  "popover.permissionLink": "أي شخص لديه الرابط",
+  "popover.permissionPrivate": "خاص",
+  "popover.privateHint": "يمكنك فقط فتح هذا الملف",
+  "popover.sectionViews_one": "{{count}} مشاهدة",
+  "popover.sectionViews_other": "{{count}} مشاهدات",
+  "popover.title": "مشاركة الملف",
+  "popover.updateError": "فشل في تحديث إعدادات المشاركة",
+  "popover.visibility": "الرؤية",
+  "popover.visibilityUpdated": "تم تحديث الرؤية",
+  "shareButton.label": "مشاركة"
+}

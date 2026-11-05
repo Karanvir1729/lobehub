@@ -1,0 +1,15 @@
+{
+  "popover.copyLink": "リンクをコピー",
+  "popover.copyLinkSuccess": "リンクがコピーされました",
+  "popover.linkHint": "リンクを持っている人はこのファイルを閲覧およびダウンロードできます",
+  "popover.permissionLink": "リンクを持っている人",
+  "popover.permissionPrivate": "非公開",
+  "popover.privateHint": "このファイルを開けるのはあなただけです",
+  "popover.sectionViews_one": "{{count}} 回の閲覧",
+  "popover.sectionViews_other": "{{count}} 回の閲覧",
+  "popover.title": "ファイルを共有",
+  "popover.updateError": "共有設定の更新に失敗しました",
+  "popover.visibility": "可視性",
+  "popover.visibilityUpdated": "可視性が更新されました",
+  "shareButton.label": "共有"
+}
