@@ -2,6 +2,7 @@ import type { WorkspaceUserPreference } from '@lobechat/types';
 import { sql } from 'drizzle-orm';
 import {
   boolean,
+  check,
   foreignKey,
   index,
   jsonb,
@@ -129,6 +130,11 @@ export const workspaceInvitations = pgTable(
     uniqueIndex('workspace_invitations_active_link_uidx')
       .on(t.workspaceId)
       .where(sql`${t.reusable} = true AND ${t.status} = 'pending'`),
+    // Only a reusable link may never expire; a single-use invitation always has an expiry.
+    check(
+      'workspace_invitations_expiry_required',
+      sql`${t.reusable} OR ${t.expiresAt} IS NOT NULL`,
+    ),
   ],
 );
 

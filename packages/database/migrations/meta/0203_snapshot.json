@@ -6,7 +6,7 @@
   },
   "dialect": "postgresql",
   "enums": {},
-  "id": "07614478-678c-4adf-9b75-8490ec18a699",
+  "id": "cfb0c604-4e9f-4a46-8ffe-f753122bd1e2",
   "policies": {},
   "prevId": "285ec8a4-45bc-409c-adfc-993edac7a4f8",
   "roles": {},
@@ -47346,7 +47346,12 @@
         }
       },
       "policies": {},
-      "checkConstraints": {},
+      "checkConstraints": {
+        "workspace_invitations_expiry_required": {
+          "name": "workspace_invitations_expiry_required",
+          "value": "\"workspace_invitations\".\"reusable\" OR \"workspace_invitations\".\"expires_at\" IS NOT NULL"
+        }
+      },
       "isRLSEnabled": false
     },
     "public.workspace_members": {

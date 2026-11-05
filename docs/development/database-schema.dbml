@@ -5531,6 +5531,7 @@ table workspace_invitations {
     email [name: 'workspace_invitations_email_idx']
     token [name: 'workspace_invitations_token_idx']
     workspace_id [name: 'workspace_invitations_active_link_uidx', unique]
+    
   }
 }
 
